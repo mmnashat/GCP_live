@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="InventoryAtDate.Buttons" t-inherit="web.ListView.Buttons" t-inherit-mode="primary" owl="1">
+        <xpath expr="(//div/*)[last()]" position="after">
+            <button
+                t-if="props.resModel == 'stock.summary'"
+                class="btn btn-primary"
+                type="button"
+                t-on-click="onClickFSInventoryAtDate">
+                Inventory at Date
+            </button>
+        </xpath>
+    </t>
+</templates>

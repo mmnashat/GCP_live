@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <!-- Inherit Form View to Modify it -->
+    <record id="sale_order_form_invoice_report" model="ir.ui.view">
+        <field name="name">sale.order.form.invoice.report</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header" position="inside">
+                <button name="generate_excel" type="object" string="Print Sales (XLSX)"/>
+            </xpath>
+
+        </field>
+    </record>
+  </data>
+</odoo>

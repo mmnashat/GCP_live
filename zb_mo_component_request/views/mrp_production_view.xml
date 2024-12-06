@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="mrp_production_form_view_inherit" model="ir.ui.view">
+		<field name="name">mrp.production.form.view.inherit</field>
+		<field name="model">mrp.production</field>
+		<field name="inherit_id" ref="mrp.mrp_production_form_view" />
+		<field name="arch" type="xml">
+			 <xpath expr="//button[@name='button_unbuild']" position="after">
+			 	<field name="is_stock_picking_created"
+					   invisible="1" />
+	             <button name="action_create_stock_picking" 
+	                     invisible="is_stock_picking_created == True or state != 'confirmed'"
+	                     string="Request Components" 
+	                     class="oe_highlight" 
+                         type="object"/>
+	        </xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+			<button class="oe_stat_button" name="action_open_related_stock_picking"
+				type="object" icon="fa-bars" width="200px">
+				<div class="o_stat_info">
+					<span class="o_stat_text">
+                                     Request Components
+                                 </span>
+				    <span class="o_stat_value" align="center">
+						<field name="related_stock_picking_count" string="."/>
+					</span>
+				</div>
+			</button>
+        </xpath>
+		</field>
+	</record>
+</odoo>

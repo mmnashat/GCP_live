@@ -1,0 +1,17 @@
+{
+    "name": "Product Scrap",
+    'version': "17.0",
+    'category': "Sales/Sales",
+    "summary": "Effortlessly relocate stock to the scrap location using a user-friendly interface.",
+    'author': "INKERP",
+    'website': 'https://www.inkerp.com/',
+    "depends": ["product", "stock"],
+    "data": ["security/ir.model.access.csv",
+             "wizards/product_scrap_wizard_view.xml",
+             "views/product_product_view.xml"],
+    'images': ['static/description/banner.png'],
+    'license': "OPL-1",
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

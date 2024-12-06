@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mrp_bom_form_inherit" model="ir.ui.view">
+        <field name="name">mrp.bom.form.inherit</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="button_add_components" type="object" string="Add Components" class="btn-primary"
+                            groups="l4l_bom_lines_from_product.l4l_group_bom_lines"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+</odoo>

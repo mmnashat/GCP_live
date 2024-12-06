@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bom_lines_from_product_all,access.bom.lines.from.product.all,model_bom_lines_from_product,l4l_bom_lines_from_product.l4l_group_bom_lines,1,1,1,1

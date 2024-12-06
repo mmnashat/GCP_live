@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="l4l_group_bom_lines" model="res.groups">
+        <field name="name">Add Bills Of Materials Components</field>
+    </record>
+</odoo>
